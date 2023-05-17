@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,500&display=swap');
+
+*,*::after,*::before{
+    margin:0;
+    padding:0;
+    box-sizing:inherit;
+}
+
+html{
+    font-family:'Inter';
+}
+body{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.grid-table{
+    border-collapse: collapse;
+    background-color: beige;
+}
+.grid-table .box{
+    width:2rem;
+    height: 2rem;
+    /* background-color: #ddff80; */
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1px;
+    margin:1px;
+}
+.grid-table .box.wall{
+    background-color: #100e24;
+    animation: wallcells .2s ease-out;
+}
+.grid-table .box i::before{
+    animation: iconcells .2s ease-out;
+}
+.grid-table .box.visited{
+    background-color: #f34545;
+    animation: pathcells .2s ease-out;
+}
+.grid-table .box.visited.pathed{
+    background-color: #45f345;
+    animation: pathcells1 .2s ease-out;
+}
+.btn{
+    margin:10px 5px;
+    padding:5px;
+    font-weight: 500;
+    display: block;
+}
+.btn-white{
+    color:rgba(0, 0, 0, 0.692);
+}
+.btn-white:hover{
+    color:#000;
+}
+
+
+@keyframes wallcells{
+    0%{
+        transform:scale(0);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+@keyframes pathcells{
+    0%{
+        border-radius: 10px;
+        transform:scale(0);
+    }
+    99%{
+        border-radius: 10px;
+        transform:scale(1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes iconcells{
+    0%{
+        transform:scale(0.6);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes pathcells1{
+    0%{
+        border-radius: 10px;
+        transform:scale(0);
+    }
+    99%{
+        border-radius: 10px;
+        transform:scale(1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

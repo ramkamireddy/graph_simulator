@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo-Simulator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-white navbar-expand-sm bg-white">
+            <div class="navbar-brand mx-auto display-4" style="font-size:1.5rem">Algo-Simulator</div>
+        </nav> 
+    </header>
+    <div class='d-flex justify-content-around'>
+        <section>
+            <nav id="controls" class='mx-2'>
+                <ul class="list-unstyled">
+                    <li id='bfs-btn' class='btn btn-white' >BFS</li>
+                    <li id='dfs-btn' class='btn btn-white' >DFS</li>
+                    <li id='stop-btn' class='btn btn-danger disabled' >Stop</li>
+                </ul>
+                <hr/>
+                <ul class="list-unstyled">
+                    <li id='clearAll' class='btn btn-white' >ClearAll</li>
+                    <li id='clearWalls' class='btn btn-white' >ClearWalls</li>
+                    <li id='clearPath' class='btn btn-white' >ClearPath</li>
+                </ul>
+
+            </nav>
+        </section>
+        <section class="grid-section text-center my-1">
+            <table class='grid-table d-inline-block'>
+
+            </table>
+        </section>
+    </div>
+    <script src='./js/grid.js' ></script>
+    <script src='./js/bfs.js'></script>
+</body>
+</html>
